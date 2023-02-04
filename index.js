@@ -16,9 +16,8 @@ var corsOptionsDelegate = function (req, callback) {
   }
   callback(null, corsOptions) // callback expects two parameters: error and options
 }
-
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
 app.get("/", (req, res) => res.send("Hello world"));
 app.post("/prueba", (req, res) => {
