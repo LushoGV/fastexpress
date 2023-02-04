@@ -18,9 +18,10 @@ var corsOptionsDelegate = function (req, callback) {
 }
 
 app.use(express.json());
-// app.use(cors());
-app.get("/", cors(corsOptionsDelegate),(req, res) => res.send("Hello world"));
-app.post("/prueba",cors(corsOptionsDelegate), (req, res) => {
+app.use(cors());
+
+app.get("/", (req, res) => res.send("Hello world"));
+app.post("/prueba", (req, res) => {
   const { prueba } = req.body;
   res.status(201).send(prueba);
 });
