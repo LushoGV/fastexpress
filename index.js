@@ -23,7 +23,7 @@ app.use(cors());
 app.get("/", (req, res) => res.send("Hello world"));
 app.post("/prueba", (req, res) => {
   const { prueba } = req.body;
-  res.status(201).send(prueba);
+  res.status(201).json(prueba);
 });
 
 app.listen(PORT);
