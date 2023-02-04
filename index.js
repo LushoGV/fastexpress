@@ -14,4 +14,6 @@ app.post("/prueba", (req, res) => {
   res.json(prueba);
 });
 
-app.listen(PORT);
+app.listen(PORT, () => {
+  console.log("first")
+});
